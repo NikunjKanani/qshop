@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-router-link href="dashboard"><ion-icon name="chevron-back-outline"></ion-icon></ion-router-link>
+    <ion-text>Filters</ion-text>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h3 class="title">Price range</h3>
+  <ion-row>
+  </ion-row>
+  <h3 class="title">Colors</h3>
+  <ion-row>
+    <ion-checkbox><div class="black"></div></ion-checkbox>
+    <ion-checkbox><div class="white"></div></ion-checkbox>
+    <ion-checkbox><div class="red"></div></ion-checkbox>
+    <ion-checkbox><div class="gray"></div></ion-checkbox>
+    <ion-checkbox><div class="coffee"></div></ion-checkbox>
+    <ion-checkbox><div class="blue"></div></ion-checkbox>
+  </ion-row>
+  <h3 class="title">Sizes</h3>
+  <ion-row>
+    <ion-checkbox>XS</ion-checkbox>
+    <ion-checkbox>S</ion-checkbox>
+    <ion-checkbox>M</ion-checkbox>
+    <ion-checkbox>L</ion-checkbox>
+    <ion-checkbox>XL</ion-checkbox>
+  </ion-row>
+  <ion-row>
+    <ion-col size="10">
+      <h3 class="title">Sizes</h3>
+      <span>adidas Originals, Jack & Jones, s.Oliver</span>
+    </ion-col>
+    <ion-col size="2">
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+    </ion-col>
+  </ion-row>
+  <ion-row class="bottom-bar">
+    <ion-button color="success">Discard</ion-button>
+    <ion-button color="success">Apply</ion-button>
+  </ion-row>
+
+</ion-content>

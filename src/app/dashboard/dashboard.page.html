@@ -1,17 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <img src="../../assets/logo.png" class="logo" />
-    <ion-icon name="search-outline" class="header-search"></ion-icon>
+    <ion-router-link href="/tabs/search">
+      <ion-icon name="search-outline" class="header-search"></ion-icon>
+    </ion-router-link>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="out-cat">
+  <!-- <div class="out-cat">
     <div class="category">
       <a>
         <img src="../../assets/icons/all-category.png"/>
         <span>All Categories</span>
       </a>
+      
+     
       <a>
         <img src="../../assets/icons/clothes.png"/>
         <span>Fashion</span>
@@ -25,7 +29,7 @@
         <span>Electronics</span>
       </a>
     </div>
-  </div>
+  </div> -->
 
   <!-- slider -->
 
@@ -53,6 +57,19 @@
       </div>
     </ion-slide> -->
   </ion-slides>
+
+  <div class="out-cat">
+    <div class="category">
+      <a [routerLink]="['/all-category']" >
+        <img class="cat_img" src="../../assets/icons/all-category.png"/>
+        <span>All Categories</span>
+      </a>
+      <a *ngFor="let cat of parent_categories">
+        <img class="cat_img" [src]="serverUrl+cat.image"/>
+        <span>{{cat.second_name}}</span>
+      </a>
+    </div>
+  </div>
 
   <!-- New Arrival -->
   <ion-grid>
@@ -138,7 +155,7 @@
       <ion-grid>
         <ion-row>
           <h1 class="title" style="margin: 15px 0 0 0;display: table">Bestselling</h1>
-          <ion-item>
+          <!-- <ion-item>
             <ion-select value="mobile" interface="action-sheet">
               <ion-select-option value="fashion">Fashion</ion-select-option>
               <ion-select-option value="mobile">Mobile</ion-select-option>
@@ -150,7 +167,7 @@
               <ion-select-option value="furniture">Furniture</ion-select-option>
               <ion-select-option value="toys">Toys</ion-select-option>
             </ion-select>
-          </ion-item>
+          </ion-item> -->
         </ion-row>
       </ion-grid>
       <ion-grid>

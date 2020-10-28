@@ -24,6 +24,18 @@ const routes: Routes = [
         loadChildren: () => import('../product-list/productlist.module').then(m => m.productlistPageModule)
       },
       {
+        path: 'search',
+        loadChildren: () => import('../search/search.module').then(m => m.searchPageModule)
+      },
+      {
+        path: 'filter',
+        loadChildren: () => import('../filter/filter.module').then(m => m.filterPageModule)
+      },
+      {
+        path: 'product-description',
+        loadChildren: () => import('../product-description/productdescription.module').then(m => m.productdescriptionPageModule)
+      },
+      {
         path: 'tab3',
         loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
       },
