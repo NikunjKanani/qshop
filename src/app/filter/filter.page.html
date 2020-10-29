@@ -1,43 +1,54 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-router-link href="dashboard"><ion-icon name="chevron-back-outline"></ion-icon></ion-router-link>
-    <ion-text>Filters</ion-text>
+    <ion-router-link href="dashboard"><ion-icon name="chevron-back"></ion-icon></ion-router-link>
+    <strong>Filters</strong>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <h3 class="title">Price range</h3>
   <ion-row>
+
   </ion-row>
   <h3 class="title">Colors</h3>
-  <ion-row>
-    <ion-checkbox><div class="black"></div></ion-checkbox>
-    <ion-checkbox><div class="white"></div></ion-checkbox>
-    <ion-checkbox><div class="red"></div></ion-checkbox>
-    <ion-checkbox><div class="gray"></div></ion-checkbox>
-    <ion-checkbox><div class="coffee"></div></ion-checkbox>
-    <ion-checkbox><div class="blue"></div></ion-checkbox>
+  <ion-row class="white-box">
+    <label><input type="checkbox" value="black" checked><span class="custom-checkbox-circle black"></span></label>
+    <label><input type="checkbox" value="white"><span class="custom-checkbox-circle white"></span></label>
+    <label><input type="checkbox" value="marron"><span class="custom-checkbox-circle marron"></span></label>
+    <label><input type="checkbox" value="gray"><span class="custom-checkbox-circle gray"></span></label>
+    <label><input type="checkbox" value="coffee" checked><span class="custom-checkbox-circle coffee"></span></label>
+    <label><input type="checkbox" value="blue"><span class="custom-checkbox-circle blue"></span></label>
   </ion-row>
   <h3 class="title">Sizes</h3>
-  <ion-row>
-    <ion-checkbox>XS</ion-checkbox>
-    <ion-checkbox>S</ion-checkbox>
-    <ion-checkbox>M</ion-checkbox>
-    <ion-checkbox>L</ion-checkbox>
-    <ion-checkbox>XL</ion-checkbox>
+  <ion-row class="white-box">
+    <label><input type="checkbox" value="xs" checked><span class="custom-checkbox-squre">XS</span></label>
+    <label><input type="checkbox" value="s"><span class="custom-checkbox-squre">S</span></label>
+    <label><input type="checkbox" value="m"><span class="custom-checkbox-squre">M</span></label>
+    <label><input type="checkbox" value="l"><span class="custom-checkbox-squre">L</span></label>
+    <label><input type="checkbox" value="xl" checked><span class="custom-checkbox-squre">XL</span></label>
   </ion-row>
-  <ion-row>
-    <ion-col size="10">
-      <h3 class="title">Sizes</h3>
-      <span>adidas Originals, Jack & Jones, s.Oliver</span>
-    </ion-col>
-    <ion-col size="2">
-      <ion-icon name="chevron-forward-outline"></ion-icon>
-    </ion-col>
-  </ion-row>
+  <ion-router-link href="tabs/brand-filter">
+    <ion-row class="white-box brands">
+      <ion-col size="10">
+        <h3>Brands</h3>
+        <span>adidas Originals, Jack & Jones, s.Oliver</span>
+      </ion-col>
+      <ion-col size="2" style="align-items: center;align-self: center;align-content: center;">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-router-link>
   <ion-row class="bottom-bar">
     <ion-button color="success">Discard</ion-button>
     <ion-button color="success">Apply</ion-button>
   </ion-row>
 
+  <ion-row class="bottom-fix-bar">
+    <ion-col>
+      <ion-button class="btn-bordered">Discard</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button class="btn-primary">Apply</ion-button>
+    </ion-col>
+  </ion-row>
 </ion-content>

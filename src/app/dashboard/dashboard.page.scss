@@ -1,7 +1,7 @@
 .out-cat{width: 100%;display: block;overflow-x: scroll;}
-.category{width: 1090px;}
-.category a{display: inline-block;padding: 10px;text-align: center;text-decoration: none;}
-.category span{display: table;font-size: 14px;color: #000;margin:0 auto}
+.category{width: 1030px;}
+.category a{display: inline-block;padding: 10px 10px 0 10px;text-align: center;text-decoration: none;}
+.category span{display: table;font-size: 12px;color: #000;margin:0 auto;margin-top: 3px;}
 .slide-image{background-color: #fff;border-radius: 5px;height: 140px;display: flex;flex-direction: row;overflow: hidden;}
 .slide{width: 100%;}
 .slide img{object-fit: cover;}
@@ -13,11 +13,11 @@
 .cat_img{height: 50px;border-radius: 50%;}
 
 /*bestselling*/
-.bestselling{box-shadow: 0 0 10px #ccc;width: 92%;display: table;margin: 30px auto;z-index: 9;position: relative;background: #fff;}
+.bestselling{box-shadow: 0 0 10px #ccc;width: 92%;display: table;margin:30px auto 5px auto;z-index: 9;position: relative;background: #fff;}
 .border-right{border-right:1px solid #ccc;}
 .bestselling ion-col{padding: 10px 0;}
 .bestselling ion-row{margin: 0 10px;}
-.bestselling span{font-size: 14px;margin: 6px auto;max-width: 80px;text-align: center;display: table}
+.bestselling span{font-size: 12px;margin: 6px auto;max-width: 80px;text-align: center;display: table}
 .bestselling img{display: table;margin: 0 auto;max-width: 80px;}
 .bestselling ion-item{--border-width:0px !important;}
 .bestselling ion-select{max-width:initial;padding: 0;}

@@ -1,4 +1,21 @@
-ion-input{position: absolute;left: 0;top: 0;width: 100%;height: 50px;padding: 8px 30px 8px 35px !important;}
-.back{position: absolute;top: 17px;left: 10px;padding: 0;z-index: 9;}
-.related-search{box-shadow:0 0 8px rgb(0 0 0 / 0.1);margin-top:20px;padding: 10px 15px;}
-.tags{border: 1px solid #000;color: #000;padding: 4px 10px;border-radius: 5px;margin: 0 10px 10px 0;display: inline-block;}
+h2{margin:0}
+.short-bio{color: #9B9B9B;font-size: 12px;}
+.review{padding:0 6px 10px 6px;}
+.review ion-icon{color:#FFBA49;font-size: 13px;}
+.review ion-text{color: #9B9B9B;font-size: 13px;}
+.description{font-size: 14px;color:#222222;margin:0;padding: 0 6px;line-height: 16px;}
+.address-area{border-top: 1px solid #AAAAAA;border-bottom: 1px solid #AAAAAA;padding: 5px 0;margin: 8px 0;}
+.delivery-message{font-size: 14px;padding: 5px 6px;}
+.delivery-message.available{color:#16B213}
+.delivery-message.not-available{color:red}
+.address-area ion-router-link{border: 1px solid #9B9B9B;border-radius: 8px;width: 100%;display: table;padding: 8px 0;text-align: center;color: #000;background: #fff;font-size: 13px;}
+.address-area ion-text{font-family: 14px;}
+.address-area p{margin:7px 0 0 0;font-size: 13px;color: #555555;}
+
+.menu{background: #fff;border-top: 1px solid #CCCCCC;margin: 10px 0;}
+.menu ion-row{border-bottom: 1px solid #ccc;padding: 7px 0;color:#000}
+
+.seller-info{background: #fff;padding: 15px 6px;margin-bottom: 100px;}
+.seller-info span{display: table;width: 100%;margin-top: 10px;text-transform: uppercase;;}
+.seller-info .total-review{background:linear-gradient(150deg,#FFBE40,#FF6A8F);border-radius: 50px;color:#fff;padding:6px 7px 4px 7px;margin-left: 7px;}
+.seller-info .total-review ion-icon{margin-right: 4px;}

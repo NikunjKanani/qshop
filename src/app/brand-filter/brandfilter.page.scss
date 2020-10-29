@@ -1,0 +1,11 @@
+.custom-box label{width: 100%;}
+.custom-box{padding:0 10px;}
+.custom-box label input{display: none}
+.custom-box small{float: right;border:2px solid #9B9B9B;border-radius: 4px;width: 22px;height: 22px;;}
+.custom-box label input[type="checkbox"]:checked + p small{background:linear-gradient(150deg,#FFBE40,#FF6A8F);height: 24px;width: 24px;border: none;box-shadow: 0 2px 5px #ccc;font-size: 20px;padding: 1px 2px;}
+.custom-box label small ion-icon{color:#fff}
+.custom-box span{display: inline-block;padding-top: 5px;}
+.custom-box label input[type="checkbox"]:checked + p>span{color:#ff9765;font-weight: 600;}
+.search-bar{position: relative;width: 93%;margin: 0 auto;}
+.search-bar ion-icon{position: absolute;left: 10px;top: 25px;z-index: 3;color:#888}
+.search-bar ion-input{background: #fff;border-radius: 50px;margin: 15px auto 0 auto;padding:0 10px 0 30px !important;font-size: 14px;}

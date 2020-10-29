@@ -25,7 +25,13 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
-ion-toolbar{height: 50px;}
+@font-face{font-family: 'Metropolis-Regular';src: url('assets/fonts/Metropolis-Regular.otf');}
+@font-face{font-family: 'Metropolis-Medium';src: url('assets/fonts/Metropolis-Medium.otf');}
+@font-face{font-family: 'Metropolis-Bold';src: url('assets/fonts/Metropolis-Bold.otf');}
+*{font-family: 'Metropolis-Regular';}
+h1,h2,h3,h4,h5,h6,strong{font-family: 'Metropolis-Bold';}
+
+ion-content{--ion-background-color:#f9f9f9;}
 .title{margin: 0;font-size: 18px;}
 
 /*product box*/
@@ -34,21 +40,23 @@ ion-toolbar{height: 50px;}
 .favourite.marked ion-icon{color: #fff;}
 .favourite ion-icon{padding-top: 9px;color: #999;}
 .product-content{text-align: left;}
-.product-provider{font-size: 13px;color: #9B9B9B;margin: 5px 0 0 0;display: table;line-height: 14px;}
-.product-content h3{margin: 0;font-size: 15px;color: #222;}
-.price,.sale,.new-price{font-size: 17px;font-weight: 800;}
+.product-provider{font-size: 11px;color: #9B9B9B;margin: 5px 0 0 0;display: table;line-height: 12px;}
+.product-content h3{margin: 0;font-size: 14px;color: #222;}
+.price,.sale,.new-price{font-size: 15px;font-weight: 800;font-family: 'Metropolis-Medium';}
 .off-label{background: #DB3022;position: absolute;border-radius: 50px;color: #fff;padding: 4px 8px;font-size: 11px;left: 10px;top: 10px;}
 .sale{color:#9B9B9B;text-decoration: line-through;margin-right: 5px;font-weight: 400;font-size: 14px;}
 .new-price{color:#DB3022;}
 
 /*row view*/
-.product-row{position: relative;box-shadow: 0 0 10px #ccc;margin: 0 10px;border-radius: 8px;margin-bottom: 25px;height: 112px;}
+.product-row{position: relative;box-shadow: 0 0 10px #ccc;border-radius: 8px;display: table;width: 92%;margin: 0 auto 30px auto;color: #000;}
 .product-row h3{font-size: 16px;margin: 5px 0;}
-.product-row .row-image{position: initial;padding: 0;overflow: hidden;display: flex;}
-.row-review{margin-bottom: 6px;}
-.row-review ion-icon{color:#FFBA49}
+.product-row .row-review{margin-bottom: 6px;}
+.product-row .row-review ion-icon{color:#FFBA49}
 .product-row .favourite{right: 20px;bottom: -12px;top: initial;}
 .product-row img{border-top-left-radius: 8px;border-bottom-left-radius: 8px;width:100%;height: 100%;object-fit: cover;}
+.product-row .row-details,.product-row .row-image{display: inline-block;vertical-align:middle;}
+.product-row .row-image{width: 110px;height: 110px;margin-right: 10px;}
+.product-row .product-provider{margin:0}
 
 /*header*/
 .logo{padding:6px;vertical-align: middle;}
@@ -60,3 +68,9 @@ ion-tab-bar ion-icon{font-size:25px;color: #9B9B9B;}
 
 /*filters*/
 .filters .item-native{padding: 0 !important;background: transparent !important;}
+
+/*bottom fix bar*/
+.bottom-fix-bar{position: fixed;left: 0;bottom:0;box-shadow: 0 0 10px #ccc;width: 100%;background-color: #fff;padding: 10px;}
+.btn-primary{--background:linear-gradient(150deg,#FFBE40,#FF6A8F);--box-shadow: 0 4px 8px rgba(0,0,0,0.25);width: 100%;--border-radius:5px}
+.btn-secondary{--background:#fff;--box-shadow: 0 4px 8px rgba(0,0,0,0.25);color:#000;width: 100%;--border-radius:5px}
+.btn-bordered{--background:#fff;border:1px solid #222;color:#000;width: 100%;border-radius:5px}
