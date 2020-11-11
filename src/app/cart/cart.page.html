@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-row>
+      <ion-col size="10">
+        <ion-router-link href="tabs/browse"><ion-icon name="chevron-back-outline"></ion-icon></ion-router-link>
+        <img src="../../assets/logo.png" class="logo" />
+      </ion-col>
+      <ion-col size="2">
+        <ion-router-link href="/tabs/search">
+          <ion-icon name="search-outline" class="header-search"></ion-icon>
+        </ion-router-link>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <h2>Cart</h2>
+  <div class="product-row">
+    <ion-row>
+      <ion-col size="5">
+        <ion-router-link href="/tabs/product-description">
+          <div class="row-image">
+            <span class="off-label">20%</span>
+            <img src="../../../assets/product/dress.png" alt="slide" />
+          </div>
+        </ion-router-link>
+      </ion-col>
+      <ion-col size="7">
+        <h3>T-Shirt SPANISH</h3>
+        <p><span>Color</span><span>Black</span><span>Size</span><span>L</span></p>
+        <ion-row>
+          <ion-col size="8">
+            <button class="remove-btn" (click)="decrementQty()"><ion-icon name="remove-outline"></ion-icon></button>
+            <!-- <span>{{item_qty}}</span> -->
+            <span>1</span>
+            <button class="add-btn" (click)="incrementQty()"><ion-icon name="add-outline"></ion-icon></button>
+          </ion-col>
+          <ion-col size="4">
+            <span class="new-price">$140</span>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

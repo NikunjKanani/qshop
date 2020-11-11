@@ -6,24 +6,13 @@
       <ion-col></ion-col>
       <ion-icon name="search-outline" class="header-search"></ion-icon>
     </ion-row>
-    <!-- <ion-row class="tabs">
-      <ion-col>
-        <ion-router-link href="/tabs/fashion" class="tab-active">Women</ion-router-link>
-      </ion-col>
-      <ion-col>
-        <ion-router-link href="/tabs/men">Men</ion-router-link>
-      </ion-col>
-      <ion-col>
-        <ion-router-link href="/tabs/kids">Kids</ion-router-link>
-      </ion-col>
-    </ion-row> -->
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true" >
   <h2>Fashion</h2>
   <ion-row>
     <ion-col *ngFor="let subcat of sub_categories">
-      <a  [routerLink]="['/childcat/', subcat.id]" >
+      <a  [routerLink]="['/product-list/', subcat.id]" >
         <div class="category-box">
           <img [src]="serverUrl+subcat.image">
         </div>

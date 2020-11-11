@@ -5,14 +5,18 @@ import { HamepageService } from 'src/app/shared/hamepage.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: 'app-productlist',
-  templateUrl: 'productlist.page.html',
-  styleUrls: ['productlist.page.scss']
+  selector: 'app-subcat',
+  templateUrl: './subcat.page.html',
+  styleUrls: ['./subcat.page.scss'],
 })
-export class productlistPage {
+export class SubcatPage implements OnInit {
+
+
+  
+
 
   home_data: any;
-  products: any;
+  sub_categories: any;
 
   id:any;
 
@@ -28,31 +32,18 @@ export class productlistPage {
   {
 
     this.id = this.route.snapshot.paramMap.get("id");
-
-    // console.log(this.id)
   }
 
   ngOnInit() 
   {
-      this.subscription = this.homepageService.get_subcat_product(this.id).subscribe((data) => {
-
-        if(data.status == 1)
-        {
+      this.subscription = this.homepageService.get_subcat_data(this.id).subscribe((data) => {
           
             this.home_data = data.result;
 
-            this.products = this.home_data.products
+            this.sub_categories = this.home_data.subcategories
             
-            // console.log(data);
-            // console.log(this.home_data);
-            // console.log(this.products);
-        }
-        else
-        {
-          this.products = false;
-        }
-
-        console.log(this.products);
+          console.log(this.home_data);
+          console.log(this.sub_categories);
           
       });
   }
@@ -60,7 +51,6 @@ export class productlistPage {
   ngOnDestroy() {
       this.subscription.unsubscribe();
   }
-
 
 
 }

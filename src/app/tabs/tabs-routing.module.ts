@@ -32,16 +32,20 @@ const routes: Routes = [
         loadChildren: () => import('../filter/filter.module').then(m => m.filterPageModule)
       },
       {
+        path: 'review',
+        loadChildren: () => import('../review/review.module').then(m => m.reviewPageModule)
+      },
+      {
+        path: 'cart',
+        loadChildren: () => import('../cart/cart.module').then(m => m.cartPageModule)
+      },
+      {
         path: 'brand-filter',
         loadChildren: () => import('../brand-filter/brandfilter.module').then(m => m.brandfilterPageModule)
       },
       {
         path: 'product-description',
         loadChildren: () => import('../product-description/productdescription.module').then(m => m.productdescriptionPageModule)
-      },
-      {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
       },
       {
         path: 'tab4',

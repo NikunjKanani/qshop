@@ -13,7 +13,7 @@
     <ion-row class="filters">
       <ion-col size="5">
         <ion-item>
-          <ion-label><ion-icon name="filter-outline"></ion-icon>Filters</ion-label>
+          <ion-label><ion-icon name="funnel-outline"></ion-icon>Sort</ion-label>
           <ion-select value="notifications" interface="action-sheet">
             <ion-select-option value="popular">Popular</ion-select-option>
             <ion-select-option value="newest">Newest</ion-select-option>
@@ -23,87 +23,36 @@
           </ion-select>
         </ion-item>
       </ion-col>
-      <ion-col size="6">
-        <ion-router-link href="/tabs/filter"><ion-icon name="funnel-outline"></ion-icon>Price: lowest to high</ion-router-link>
+      <ion-col size="5">
+        <ion-router-link href="/tabs/filter"><ion-icon name="filter-outline"></ion-icon>Filter</ion-router-link>
       </ion-col>
-      <ion-col size="1">
+      <ion-col size="2">
         <ion-icon name="list-outline"></ion-icon>
       </ion-col>
     </ion-row>
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
-  <h2>Women’s Top</h2>
-  <ion-row>
-    <ion-col>
+  <!-- <h2>Women’s Top</h2> -->
+  <ion-row *ngIf="products;else no_products">
+    <ion-col *ngFor="let product of products">
       <ion-router-link href="/tabs/product-description">
         <div class="product">
           <div class="product-image">
-            <img src="../../../assets/product/furniture.png" alt="slide" />
+            <img [src]="serverUrl+'/uploads/images/'+product.image_small" alt="slide" />
             <div class="favourite marked"><ion-icon name="heart"></ion-icon></div>
           </div>
           <div class="product-content">
-            <span class="product-provider">Mango</span>
-            <h3>T-Shirt SPANISH</h3>
-            <span class="sale">$210</span><span class="new-price">$140</span>
+            <h3>{{product.title}}</h3>
+            <span class="product-provider">{{product.sku}}</span>
+            <span class="sale">${{(product.price/100)+100}}</span><span class="new-price">${{product.price/100}}</span>
           </div>
         </div>
       </ion-router-link>
     </ion-col>
-    <ion-col>
-      <ion-router-link href="/tabs/product-description">
-        <div class="product">
-          <div class="product-image">
-            <span class="off-label">20%</span>
-            <img src="../../../assets/product/furniture.png" alt="slide" />
-            <div class="favourite"><ion-icon name="heart-outline"></ion-icon></div>
-          </div>
-          <div class="product-content">
-            <span class="product-provider">Mango</span>
-            <h3>T-Shirt SPANISH</h3>
-            <span class="sale">$210</span><span class="new-price">$140</span>
-          </div>
-        </div>
-      </ion-router-link>
-    </ion-col>
+    
   </ion-row>
-  <ion-router-link href="/tabs/product-description" class="product-row">
-    <div class="row-image">
-      <img src="../../../assets/product/tops.png" alt="slide" />
-      <div class="favourite"><ion-icon name="heart-outline"></ion-icon></div>
-    </div>
-    <div class="row-details">
-      <span class="product-provider">Mango</span>
-      <h3>T-Shirt SPANISH</h3>
-      <div class="row-review">
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star-outline"></ion-icon>
-        <ion-text>5</ion-text>
-      </div>
-      <span class="sale">$210</span><span class="new-price">$140</span>
-    </div>
-  </ion-router-link>
-  <ion-router-link href="/tabs/product-description" class="product-row">
-    <div class="row-image">
-      <span class="off-label">20%</span>
-      <img src="../../../assets/product/dress.png" alt="slide" />
-      <div class="favourite marked"><ion-icon name="heart"></ion-icon></div>
-    </div>
-    <div class="row-details">
-      <span class="product-provider">Mango</span>
-      <h3>T-Shirt SPANISH</h3>
-      <div class="row-review">
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star-outline"></ion-icon>
-        <ion-text>5</ion-text>
-      </div>
-      <span class="sale">$210</span><span class="new-price">$140</span>
-    </div>
-  </ion-router-link>
+  <ng-template #no_products>No Products available</ng-template>
+  
+  
 </ion-content>

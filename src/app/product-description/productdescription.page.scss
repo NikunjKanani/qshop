@@ -2,8 +2,8 @@ h2{margin:0}
 .short-bio{color: #9B9B9B;font-size: 12px;}
 .review{padding:0 6px 10px 6px;}
 .review ion-icon{color:#FFBA49;font-size: 13px;}
-.review ion-text{color: #9B9B9B;font-size: 13px;}
-.description{font-size: 14px;color:#222222;margin:0;padding: 0 6px;line-height: 16px;}
+.review ion-text{color: #9B9B9B;font-size: 13px;margin-left: 5px;}
+.description{font-size: 13px;color:#222222;margin:0;padding: 0 6px;line-height: 16px;}
 .address-area{border-top: 1px solid #AAAAAA;border-bottom: 1px solid #AAAAAA;padding: 5px 0;margin: 8px 0;}
 .delivery-message{font-size: 14px;padding: 5px 6px;}
 .delivery-message.available{color:#16B213}
@@ -13,9 +13,22 @@ h2{margin:0}
 .address-area p{margin:7px 0 0 0;font-size: 13px;color: #555555;}
 
 .menu{background: #fff;border-top: 1px solid #CCCCCC;margin: 10px 0;}
-.menu ion-row{border-bottom: 1px solid #ccc;padding: 7px 0;color:#000}
+.menu .border-bottom{border-bottom: 1px solid #ccc;padding: 7px 0;color:#000}
+.menu span{font-size: 14px;}
+.menu h3{font-weight: 600;padding: 6px 5px;font-size: 14px;color: #555;display: table;}
 
 .seller-info{background: #fff;padding: 15px 6px;margin-bottom: 100px;}
 .seller-info span{display: table;width: 100%;margin-top: 10px;text-transform: uppercase;;}
 .seller-info .total-review{background:linear-gradient(150deg,#FFBE40,#FF6A8F);border-radius: 50px;color:#fff;padding:6px 7px 4px 7px;margin-left: 7px;}
 .seller-info .total-review ion-icon{margin-right: 4px;}
+
+ion-slide img{width:100%}
+
+.product-info.open .specifications,.faq-info.open .faq-details{display: block}
+.product-info.close ion-icon,.faq-info.close ion-icon{transform: rotate(0deg);transition: 0.2s;}
+.product-info.open ion-icon,.faq-info.open ion-icon{transform: rotate(90deg);transition: 0.2s;}
+.product-info.close .specifications,.faq-info.close .faq-details{display: none}
+
+.faq-details{padding: 0 5px;}
+.faq-details span{font-weight:600;font-size: 15px;line-height: 19px;margin-bottom: 7px;display: table;}
+.faq-details p{margin:0 0 15px 0;font-size: 14px;line-height: 18px;}

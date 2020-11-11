@@ -43,16 +43,6 @@ export class HamepageService {
 
   }
 
-  get_subcat_product(cat_id)
-  {
-    // console.log(cat_id);
-    return this.http.get<any>(this.serverUrl + 'api/homepage/subcategory_product/' + cat_id)
-    .pipe(
-      catchError(this.handleError)
-    );
-
-  }
-
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       // A client-side or network error occurred. Handle it accordingly.

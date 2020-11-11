@@ -14,6 +14,30 @@
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
+  <ion-slides [options]="productOptions" class="productslider" pager="true" #slider autoplay="5000">
+    <ion-slide>
+      <img src="../../assets/product/image.png"/>
+    </ion-slide>
+    <ion-slide>
+      <img src="../../assets/product/image1.png"/>
+    </ion-slide>
+    <ion-slide>
+      <img src="../../assets/product/image2.png"/>
+    </ion-slide>
+    <ion-slide>
+      <img src="../../assets/product/image3.png"/>
+    </ion-slide>
+  </ion-slides>
+  <ion-row>
+    <ion-item>
+      <ion-select value="notifications" value="black" interface="action-sheet">
+        <ion-select-option value="black">Black</ion-select-option>
+        <ion-select-option value="white">White</ion-select-option>
+        <ion-select-option value="maroon">Maroon</ion-select-option>
+        <ion-select-option value="red">Red</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-row>
   <ion-row>
     <ion-col>
       <h2>H&M</h2>
@@ -44,7 +68,7 @@
   </ion-row>
   <span class="delivery-message available">Free delivery available</span>
   <div class="menu">
-    <ion-router-link href="">
+    <div class="border-bottom product-info" (click)="productClick()" [ngClass]="status ? 'open' : 'close'">
       <ion-row>
         <ion-col>
           <ion-text>Product info</ion-text>
@@ -53,8 +77,43 @@
           <ion-icon name="chevron-forward"></ion-icon>
         </ion-col>
       </ion-row>
-    </ion-router-link>
-    <ion-router-link href="">
+      <div class="specifications">
+        <h3>Specifications</h3>
+        <ion-row>
+          <ion-col size="5">
+            <small>Sleeve Length</small>
+          </ion-col>
+          <ion-col size="7">
+            <span>Three-Quarter Sleeves</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="5">
+            <small>Top Shape</small>
+          </ion-col>
+          <ion-col size="7">
+            <span>Straight</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="5">
+            <small>Top Type</small>
+          </ion-col>
+          <ion-col size="7">
+            <span>Kurta</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="5">
+            <small>Bottom Type</small>
+          </ion-col>
+          <ion-col size="7">
+            <span>Palazzos</span>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+    <div class="border-bottom faq-info" (click)="faqClick()" [ngClass]="value ? 'open' : 'close'">
       <ion-row>
         <ion-col>
           <ion-text>FAQ</ion-text>
@@ -63,7 +122,16 @@
           <ion-icon name="chevron-forward"></ion-icon>
         </ion-col>
       </ion-row>
-    </ion-router-link>
+      <div class="faq-details">
+        <span>What is Try and Buy Service?</span>
+        <p>This service entitles you to try out your purchases at the time of delivery, pay only for what you like and return the rest on-the-spot. Try and Buy is a paid service, available on most of the products and in 31 Cities, you can enter pin code on product page to check service availability. Try and Buy is only available on orders containing &lt;=5 items in cart. To avail this service min. order value should be Rs.1199 and above. To avail the service, please ensure that you tick the 'Try and Buy' box on check-out page and choose delivery address where you are comfortable trying product. Terms of service may differ for our new customers.</p>
+        <p>Try and Buy will not be available during big sale days; We will re-offer the service, post such events.</p>
+        <span>Why are there different prices for the same product? Is it legal?</span>
+        <p>Myntra is an online marketplace platform that enables independent sellers to sell their products to buyers. The prices are solely decided by the sellers, and Myntra does not interfere in the same. There could be a possibility that the same product is sold by different sellers at different prices. Myntra rightfully fulfils all legal compliances of onboarding multiple sellers on its forum as it is a marketplace platform.</p>
+        <span>How will I identify a genuine appointment letter?</span>
+        <p>Please beware of the fraudulent individuals/agencies that are enticing job seekers by promising them career opportunities at Myntra in lieu of 1.) recruitment fee 2.) processing fee 3.) security deposit 4.) software or equipment charges 5.) on-boarding charges etc. Please be cautious that, Myntra and its recruitment partners never ask for any fee in exchange for an offer letter or interview calls. All offer related communications are sent from an official Myntra email id only.</p>
+      </div>
+    </div>
   </div>
   <ion-row class="seller-info">
     <strong>Sold By</strong>

@@ -60,11 +60,11 @@
 
   <div class="out-cat">
     <div class="category">
-      <a [routerLink]="['/tabs/browse']" >
+      <a [routerLink]="['/all-category']" >
         <img class="cat_img" src="../../assets/icons/all-category.png"/>
         <span>All Categories</span>
       </a>
-      <a *ngFor="let cat of parent_categories" [routerLink]="['/subcat/', cat.id]">
+      <a *ngFor="let cat of parent_categories">
         <img class="cat_img" [src]="serverUrl+cat.image"/>
         <span>{{cat.second_name}}</span>
       </a>
@@ -74,7 +74,7 @@
   <!-- New Arrival -->
   <ion-grid>
     <ion-row>
-      <h1 class="title" style="margin-left: 10px">New Arrival</h1>
+      <h1 class="title" style="margin-left: 5px">New Arrival</h1>
     </ion-row>
   </ion-grid>
   <ion-slides class="product-slider" [options]="productOptions" #slider>

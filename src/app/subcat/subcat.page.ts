@@ -12,9 +12,6 @@ import { environment } from 'src/environments/environment';
 export class SubcatPage implements OnInit {
 
 
-  
-
-
   home_data: any;
   sub_categories: any;
 
@@ -32,6 +29,8 @@ export class SubcatPage implements OnInit {
   {
 
     this.id = this.route.snapshot.paramMap.get("id");
+
+    // console.log(this.id)
   }
 
   ngOnInit() 
