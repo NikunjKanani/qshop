@@ -5,15 +5,17 @@
     <span>Explore latest products today!</span>
   </div>
   <div class="col">
-    <ion-item>
-      <ion-label position="stacked">Email Address</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Password</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-    <ion-button>continue</ion-button>
+    <form #loginform="ngForm" method="POST">
+      <ion-item>
+        <ion-label position="stacked">Email Address</ion-label>
+        <ion-input type="text" [(ngModel)]="loginform.email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="loginform.password"></ion-input>
+      </ion-item>
+      <ion-button (click)="login(loginform)">continue</ion-button>
+    </form>
   </div>
   <img src="../../assets/app-back.png" class="app-bg-icon" />
 </div>

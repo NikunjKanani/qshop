@@ -10,3 +10,4 @@ ion-toolbar{height: initial;}
 ion-label{margin: 0;width: 100%;}
 /*common*/
 h2{margin: 15px 10px;font-size: 18px;}
+ion-select::part(icon){display: none !important;}
