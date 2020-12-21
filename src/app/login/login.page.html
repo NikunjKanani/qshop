@@ -8,11 +8,11 @@
     <form #loginform="ngForm" method="POST">
       <ion-item>
         <ion-label position="stacked">Email Address</ion-label>
-        <ion-input type="text" [(ngModel)]="loginform.email"></ion-input>
+        <ion-input type="text" name="email" [(ngModel)]="loginform.email"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="stacked">Password</ion-label>
-        <ion-input type="password" [(ngModel)]="loginform.password"></ion-input>
+        <ion-input type="password" name="password" [(ngModel)]="loginform.password"></ion-input>
       </ion-item>
       <ion-button (click)="login(loginform)">continue</ion-button>
     </form>

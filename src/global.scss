@@ -77,3 +77,9 @@ ion-tab-bar ion-icon{font-size:25px;color: #9B9B9B;}
 
 /*product detail page*/
 .productslider .swiper-pagination{display: none;}
+
+
+ion-action-sheet .action-sheet-group{text-align: center;}
+ion-action-sheet .action-sheet-group:not(.action-sheet-group-cancel) button{display: inline-block !important;width: initial !important;margin: 10px 10px;width: 75px !important;height: initial !important;padding: 10px 0 30px 0 !important;border-radius: 5px;border: 1px solid #ccc !important;}
+ion-action-sheet .action-sheet-group button{color: #000;}
+ion-action-sheet .action-sheet-group button span{justify-content: center !important;}

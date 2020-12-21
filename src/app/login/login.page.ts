@@ -14,17 +14,17 @@ export class loginPage {
   constructor(
     private alertService: AlertService,
     private apiService: ApiserviceService,
-    private navCtrl: NavController
-    //public storage: Storage
+    private navCtrl: NavController,
+    public storage: Storage
     ) {}
   login(form: NgForm){
   	this.apiService.login(form.value.email, form.value.password).subscribe(
       data => {
       		if(data['status']=="success"){
       			console.log(data['data']);
-      			//this.storage.set('user',data['data']);
+      			this.storage.set('user',data['data']);
       			this.alertService.presentToast(data['msg'],'success');
-      			//console.log('user-'+this.storage.get('user'));
+      			console.log('user-'+this.storage.get('user'));
         		this.navCtrl.navigateRoot('/dashboard');
         	}else{
         		this.alertService.presentToast(data['msg'],'danger');

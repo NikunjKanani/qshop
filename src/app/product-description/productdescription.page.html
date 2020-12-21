@@ -29,14 +29,28 @@
     </ion-slide>
   </ion-slides>
   <ion-row>
-    <ion-item>
-      <ion-select value="notifications" value="black" interface="action-sheet">
+    <ion-col>
+      <ion-select class="size-sheet" value="notifications" value="xs" interface="action-sheet">
+        <ion-select-option value="xs">XS</ion-select-option>
+        <ion-select-option value="s">S</ion-select-option>
+        <ion-select-option value="m">M</ion-select-option>
+        <ion-select-option value="l">L</ion-select-option>
+        <ion-select-option value="xl">XL</ion-select-option>
+      </ion-select>
+    </ion-col>
+    <ion-col>
+      <ion-select class="color-sheet" value="notifications" value="black" interface="action-sheet">
         <ion-select-option value="black">Black</ion-select-option>
         <ion-select-option value="white">White</ion-select-option>
         <ion-select-option value="maroon">Maroon</ion-select-option>
         <ion-select-option value="red">Red</ion-select-option>
       </ion-select>
-    </ion-item>
+    </ion-col>
+    <ion-col style="text-align: right;">
+      <button class="btn-wishlist">
+        <ion-icon name="heart-outline"></ion-icon>
+      </button>
+    </ion-col>
   </ion-row>
   <ion-row>
     <ion-col>
