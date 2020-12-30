@@ -1,0 +1,66 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-row>
+      <ion-col size="10">
+        <ion-router-link href="tabs/browse"><ion-icon name="chevron-back-outline"></ion-icon></ion-router-link>
+        <img src="../../assets/logo.png" class="logo" />
+      </ion-col>
+      <ion-col size="2">
+        <ion-router-link href="/tabs/search">
+          <ion-icon name="search-outline" class="header-search"></ion-icon>
+        </ion-router-link>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <h2>Order Details</h2>
+  <div class="product-row">
+    <ion-row>
+      <ion-col size="5">
+        <ion-router-link href="/tabs/product-description">
+          <div class="col-image" style="background-image: url(../../assets/product/dress.png);">
+            <span class="off-label">20%</span>
+          </div>
+        </ion-router-link>
+      </ion-col>
+      <ion-col size="7" style="padding:10px 0;">
+        <h3>T-Shirt SPANISH</h3>
+        <span class="compay-name">Mango</span>
+        <p><span class="product-label">Color:</span><span class="product-label-detail">Black</span>
+        <span class="product-label ml-10">Size:</span><span class="product-label-detail">L</span></p>
+        <ion-row style="margin-top: 7px;">
+          <ion-col size="8">
+            <span class="product-label">Units:</span><span class="product-label-detail">2</span>
+          </ion-col>
+          <ion-col size="4">
+            <span class="price">$140</span>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </div>
+  <ion-row class="order-info">
+    <h6>Order information</h6>
+    <ion-row>
+      <ion-col size="5"><span>Shipping Address:</span></ion-col>
+      <ion-col size="7"><span class="font-medium">3 Newbridge Court,CA 91709, United States</span></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5"><span>Shipping Address:</span></ion-col>
+      <ion-col size="7"><img src="assets/icons/card.png" /> <span class="font-medium">**** **** **** 3947</span></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5"><span>Delivery Method:</span></ion-col>
+      <ion-col size="7"><span class="font-medium">FedEx, 3 days, 15$</span></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5"><span>Discount:</span></ion-col>
+      <ion-col size="7"><span class="font-medium">10%, Personal promo code</span></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5"><span>Total Amount:</span></ion-col>
+      <ion-col size="7"><span class="font-medium">$133</span></ion-col>
+    </ion-row>
+  </ion-row>
+</ion-content>

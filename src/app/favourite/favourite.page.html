@@ -14,7 +14,7 @@
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
-  <h2>Cart</h2>
+  <h2>Favorites</h2>
   <div class="product-row">
     <ion-row>
       <ion-col size="5">
@@ -24,22 +24,29 @@
           </div>
         </ion-router-link>
       </ion-col>
-      <ion-col size="7" style="padding:10px 0;">
+      <ion-col size="7" style="padding:10px 0;min-height: 122px;">
+        <ion-icon class="close-icon" name="close-outline"></ion-icon>
         <h3>T-Shirt SPANISH</h3>
-        <p><span class="product-label">Color:</span><span class="product-label-detail">Black</span>
+        <span class="comapny-name">LIME</span>
+        <p>
+          <span class="product-label">Color:</span><span class="product-label-detail">Black</span>
           <span class="product-label ml-10">Size:</span><span class="product-label-detail">L</span></p>
-        <ion-row style="padding-top: 10px;">
-          <ion-col size="8">
-            <button class="remove-btn" (click)="decrementQty()"><ion-icon name="remove-outline"></ion-icon></button>
-            <!-- <span>{{item_qty}}</span> -->
-            <span>1</span>
-            <button class="add-btn" (click)="incrementQty()"><ion-icon name="add-outline"></ion-icon></button>
-          </ion-col>
+        <ion-row style="padding-top: 6px;">
           <ion-col size="4">
             <span class="price">$140</span>
           </ion-col>
+          <ion-col size="8" class="review-rating">
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star-half-outline"></ion-icon>
+            <span class="star-overview">(4.5)</span>
+          </ion-col>
         </ion-row>
       </ion-col>
+      <div class="fav-bag">
+      <ion-icon name="bag"></ion-icon></div>
     </ion-row>
   </div>
 </ion-content>

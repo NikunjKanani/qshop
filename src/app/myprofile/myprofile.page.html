@@ -1,0 +1,91 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-row>
+      <ion-col size="10">
+        <ion-router-link href="tabs/browse"><ion-icon name="chevron-back-outline"></ion-icon></ion-router-link>
+        <img src="../../assets/logo.png" class="logo" />
+      </ion-col>
+      <ion-col size="2">
+        <ion-router-link href="/tabs/search">
+          <ion-icon name="search-outline" class="header-search"></ion-icon>
+        </ion-router-link>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <h2>My Profile</h2>
+  <ion-row>
+    <img src="../../assets/user.jpg" class="profile-image" />
+    <div class="user-name">
+      <h5>Matilda Brown</h5>
+      <span>matildabrown@mail.com</span>
+    </div>
+  </ion-row>
+  <ion-router-link class="profile-menu" href="tabs/myorder">
+    <ion-row>
+      <ion-col size="11">
+        <strong>My orders</strong>
+        <span>Already have 12 orders</span>
+      </ion-col>
+      <ion-col size="1">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-col>
+    </ion-row>    
+  </ion-router-link>
+  <ion-router-link class="profile-menu" href="/tabs/search">
+    <ion-row>
+      <ion-col size="11">
+        <strong>Shipping addresses</strong>
+        <span>3 addresses</span>
+      </ion-col>
+      <ion-col size="1">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-col>
+    </ion-row>    
+  </ion-router-link>
+  <ion-router-link class="profile-menu" href="/tabs/search">
+    <ion-row>
+      <ion-col size="11">
+        <strong>Payment methods</strong>
+        <span>Visa  **34</span>
+      </ion-col>
+      <ion-col size="1">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-col>
+    </ion-row>    
+  </ion-router-link>
+  <ion-router-link class="profile-menu" href="tabs/setting">
+    <ion-row>
+      <ion-col size="11">
+        <strong>Settings</strong>
+        <span>Notifications, password</span>
+      </ion-col>
+      <ion-col size="1">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-col>
+    </ion-row>    
+  </ion-router-link>
+  <ion-router-link class="profile-menu" href="/tabs/search">
+    <ion-row>
+      <ion-col size="11">
+        <strong>My reviews</strong>
+        <span>Reviews for 4 items</span>
+      </ion-col>
+      <ion-col size="1">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-col>
+    </ion-row>    
+  </ion-router-link>
+  <ion-router-link class="profile-menu" href="/tabs/search">
+    <ion-row>
+      <ion-col size="11">
+        <strong>Promocodes</strong>
+        <span>Reviews for 4 items</span>
+      </ion-col>
+      <ion-col size="1">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-col>
+    </ion-row>    
+  </ion-router-link>
+</ion-content>

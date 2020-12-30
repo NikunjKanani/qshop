@@ -48,12 +48,24 @@ const routes: Routes = [
         loadChildren: () => import('../product-description/productdescription.module').then(m => m.productdescriptionPageModule)
       },
       {
-        path: 'tab4',
-        loadChildren: () => import('../tab4/tab4.module').then(m => m.Tab4PageModule)
+        path: 'favourite',
+        loadChildren: () => import('../favourite/favourite.module').then(m => m.favouritePageModule)
       },
       {
-        path: 'tab5',
-        loadChildren: () => import('../tab5/tab5.module').then(m => m.Tab5PageModule)
+        path: 'myprofile',
+        loadChildren: () => import('../myprofile/myprofile.module').then(m => m.myprofilePageModule)
+      },
+      {
+        path: 'myorder',
+        loadChildren: () => import('../myorder/myorder.module').then(m => m.myorderPageModule)
+      },
+      {
+        path: 'setting',
+        loadChildren: () => import('../setting/setting.module').then(m => m.settingPageModule)
+      },
+      {
+        path: 'orderdetail',
+        loadChildren: () => import('../orderdetail/orderdetail.module').then(m => m.orderdetailPageModule)
       },
       {
         path: '',
