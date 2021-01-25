@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
 export class settingPage {
 
   constructor() {}
-
+  showMyContainer: boolean = false;
+  showSettingContainer: boolean = false;  
 }

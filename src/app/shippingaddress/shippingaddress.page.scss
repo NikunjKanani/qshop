@@ -1,0 +1,12 @@
+h2{margin: 15px 10px;font-size: 18px;}
+ion-col{padding: 0;align-self: flex-start;}
+ion-card{padding: 15px;background-color: #fff;margin: 0 10px 20px 10px;}
+ion-card h6{color: #000;margin: 0;display: inline;}
+ion-card .edit{float:right;color: #DB3022;}
+ion-card p{line-height:22px}
+.custom-check input{display: none}
+.custom-check span{border:1px solid #ccc;width: 18px;height: 18px;display: inline-block;border-radius: 5px;transition: 0.2s;margin-right: 5px;vertical-align: middle;}
+.custom-check ion-icon{opacity: 0;transition: 0.2s;font-size: 16px;color:#fff;transform: rotate(90deg);}
+.custom-check input[type="checkbox"]:checked + span{background-color: #000;transition: 0.2s;border-color: transparent;}
+.custom-check input[type="checkbox"]:checked + span ion-icon{opacity: 1;transition: 0.2s;transform: rotate(0deg);}
+.floating-btn{position: fixed;bottom: 20px;right: 20px;background-color: #222;border-radius: 50%;width: 35px;height: 35px;color: #fff;font-size: 26px;text-align: center;padding: 4px 0;box-shadow: 0 4px 4px rgb(0 0 0 / 0.22);}

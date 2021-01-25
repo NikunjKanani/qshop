@@ -25,7 +25,7 @@
         </ion-router-link>
       </ion-col>
       <ion-col size="7" style="padding:10px 0;">
-        <h3>T-Shirt SPANISH</h3>
+        <h3>T-Shirt SPANISH</h3><ion-icon class="popover-btn" (click)="showPopover=!showPopover" name="ellipsis-vertical-outline"></ion-icon>
         <p><span class="product-label">Color:</span><span class="product-label-detail">Black</span>
           <span class="product-label ml-10">Size:</span><span class="product-label-detail">L</span></p>
         <ion-row style="padding-top: 10px;">
@@ -41,5 +41,65 @@
         </ion-row>
       </ion-col>
     </ion-row>
+    <div class="popover" *ngIf="showPopover">
+      <div class="backdrop-bg" (click)="showPopover=!showPopover"></div>
+      <div class="card">
+        <span>Add to favorites</span>
+        <span>Delete from the list</span>
+      </div>
+    </div>
+  </div>
+  <ion-row style="margin:0 15px;position: relative;">
+    <input type="text" (click)="showMyContainer=!showMyContainer" placeholder="Enter your promo code"/>
+    <div class="button-apply"><ion-icon name="chevron-forward-outline"></ion-icon></div>
+  </ion-row>
+  <ion-row style="margin:0 15px;">
+    <ion-col size="6">
+      <span>Total amount:</span>
+    </ion-col>
+    <ion-col size="6" style="text-align: right;">
+      <strong>$124</strong>
+    </ion-col>
+  </ion-row>
+  <div class="change-pass-popup" *ngIf="showMyContainer">
+    <div class="backdrop" (click)="showMyContainer=!showMyContainer"></div>
+    <div class="bg-gray">
+      <ion-row style="margin:0 15px;position: relative;">
+        <input type="text" (click)="showMyContainer=!showMyContainer" placeholder="Enter your promo code"/>
+        <div class="button-apply"><ion-icon name="chevron-forward-outline"></ion-icon></div>
+      </ion-row>
+      <ion-row class="offer-card">
+        <ion-col size="3">
+          <h1>10</h1>
+          <h1>
+            <span>%</span>
+            <span>off</span>
+          </h1>
+        </ion-col>
+        <ion-col size="5">
+          <strong>Personal offer</strong>
+          <small>NewUser</small>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button class="btn-primary">Apply</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row class="offer-card">
+        <ion-col size="3">
+          <h1>10</h1>
+          <h1>
+            <span>%</span>
+            <span>off</span>
+          </h1>
+        </ion-col>
+        <ion-col size="5">
+          <strong>New year offer</strong>
+          <small>NewYear</small>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button class="btn-primary">Apply</ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
   </div>
 </ion-content>

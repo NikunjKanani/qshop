@@ -68,6 +68,22 @@ const routes: Routes = [
         loadChildren: () => import('../orderdetail/orderdetail.module').then(m => m.orderdetailPageModule)
       },
       {
+        path: 'shippingaddress',
+        loadChildren: () => import('../shippingaddress/shippingaddress.module').then(m => m.shippingaddressPageModule)
+      },
+      {
+        path: 'addaddress',
+        loadChildren: () => import('../addaddress/addaddress.module').then(m => m.addaddressPageModule)
+      },
+      {
+        path: 'checkout',
+        loadChildren: () => import('../checkout/checkout.module').then(m => m.checkoutPageModule)
+      },
+      {
+        path: 'paymentmethod',
+        loadChildren: () => import('../paymentmethod/paymentmethod.module').then(m => m.paymentmethodPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/dashboard',
         pathMatch: 'full'

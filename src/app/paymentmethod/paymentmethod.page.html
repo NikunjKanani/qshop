@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-row>
+      <ion-col size="10">
+        <ion-router-link href="tabs/browse"><ion-icon name="chevron-back-outline"></ion-icon></ion-router-link>
+        <img src="../../assets/logo.png" class="logo" />
+      </ion-col>
+      <ion-col size="2">
+        <ion-router-link href="/tabs/search">
+          <ion-icon name="search-outline" class="header-search"></ion-icon>
+        </ion-router-link>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <h2>Payment Methods</h2>
+  <div style="padding: 0 10px;">
+    <h6>Your payment cards</h6>
+    <div class="card-bg" style="background-image:url(../../assets/card.png)">
+      <h3>**** **** **** 3947</h3>
+      <div class="holder-name">
+        <span>Card Holder Name</span>
+        <strong>Jennyfer Doe</strong>
+      </div>
+      <div class="expiry-date">
+        <span>Expiry Date</span>
+        <strong>05/23</strong>
+      </div>
+      <div class="card-icon">
+        <img src="../../assets/icons/card.png" />
+      </div>
+    </div>
+    <label class="custom-check"><input type="checkbox" /><span><ion-icon name="checkmark-outline"></ion-icon></span>Use as default payment method</label>
+    <span (click)="showMyContainer=!showMyContainer" class="floating-btn"><ion-icon name="add-outline"></ion-icon></span>
+  </div>
+  <div class="change-pass-popup" *ngIf="showMyContainer">
+    <div class="backdrop" (click)="showMyContainer=!showMyContainer"></div>
+    <div class="bg-gray">
+      <h2>Add New Card</h2>
+      <ion-row style="padding:0 15px">
+        <input type="text" placeholder="Name on card" />
+      </ion-row>
+      <ion-row style="padding:0 15px">
+        <input type="text" placeholder="Card Number" />
+      </ion-row>
+      <ion-row style="padding:0 15px">
+        <input type="text" placeholder="Expiry Date" />
+      </ion-row>
+      <ion-row style="padding:0 15px">
+        <input type="text" placeholder="CVV" />
+      </ion-row>
+      <ion-row style="padding:0 15px">
+        <input type="checkbox" />Set as default payment method
+      </ion-row>
+      <ion-row style="padding:0 15px">
+        <ion-button class="btn-primary">SAVE PASSWORD</ion-button>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>

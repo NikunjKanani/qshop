@@ -24,7 +24,7 @@
   </ion-row>
   <ion-row style="padding:0 10px">
     <ion-button class="btn-primary">Save</ion-button>
-    <ion-router-link class="change-btn" href="/tabs/search">Change password</ion-router-link>
+    <span class="change-btn" (click)="showMyContainer=!showMyContainer">Change password</span>
   </ion-row>
   <h4>Notifications</h4>
   <ion-row style="padding:0 10px 15px 10px">
@@ -51,4 +51,22 @@
       <label class="toggle-btn"><input type="radio"><span></span></label>
     </ion-col>
   </ion-row>
+  <div class="change-pass-popup" *ngIf="showMyContainer">
+    <div class="backdrop" (click)="showMyContainer=!showMyContainer"></div>
+    <div class="bg-gray">
+      <h2>Password Change</h2>
+      <ion-row style="padding:0 15px">
+        <input type="text" placeholder="Old Password" />
+      </ion-row>
+      <ion-row style="padding:0 15px">
+        <input type="text" placeholder="New Password" />
+      </ion-row>
+      <ion-row style="padding:0 15px">
+        <input type="text" placeholder="Confirm New Password" />
+      </ion-row>
+      <ion-row style="padding:0 15px">
+        <ion-button class="btn-primary">SAVE PASSWORD</ion-button>
+      </ion-row>
+    </div>
+  </div>
 </ion-content>

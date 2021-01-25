@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-row>
+      <ion-col size="10">
+        <ion-router-link href="tabs/browse"><ion-icon name="chevron-back-outline"></ion-icon></ion-router-link>
+        <img src="../../assets/logo.png" class="logo" />
+      </ion-col>
+      <ion-col size="2">
+        <ion-router-link href="/tabs/search">
+          <ion-icon name="search-outline" class="header-search"></ion-icon>
+        </ion-router-link>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <h2>Checkout</h2>
+  <div style="padding:0 10px">
+    <h6>Shipping address</h6>
+    <ion-card>
+      <h6>Jane Doe</h6>
+      <ion-router-link class="edit" href="tabs/browse">Change</ion-router-link>
+      <p>3 Newbridge Court Chino Hills, CA 91709, United States</p>
+    </ion-card>
+    <h6>Payment<ion-router-link class="edit" href="tabs/browse">Change</ion-router-link></h6>
+    <div class="card-bg">
+      <img src="../../assets/icons/card.png" >
+    </div>
+    **** **** **** 3947
+    <h6>Delivery method</h6>
+    <div class="delivery-bg">
+      <img src="../../assets/icons/fedex.png" >
+      <span>2-3 days</span>
+    </div>
+    <div class="delivery-bg">
+      <img src="../../assets/icons/dhl.png" >
+      <span>2-3 days</span>
+    </div>
+    <div class="delivery-bg">
+      <img src="../../assets/icons/usps.png" >
+      <span>2-3 days</span>
+    </div>
+    <ion-row style="padding: 15px 0 0 0;">
+      <ion-col>
+        <span class="product-label">Order:</span>
+      </ion-col>
+      <ion-col style="text-align: right;">
+        <span class="price">$120</span>
+      </ion-col>
+    </ion-row>
+    <ion-row style="padding: 15px 0 0 0;">
+      <ion-col>
+        <span class="product-label">Delivery:</span>
+      </ion-col>
+      <ion-col style="text-align: right;">
+        <span class="price">$15</span>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
